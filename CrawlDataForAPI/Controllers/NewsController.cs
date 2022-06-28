@@ -9,7 +9,7 @@ namespace CrawlDataForAPI.Controllers
 {
     public class NewsController : ApiController
     {
-        private INewsRepository _newsRepository;
+        private readonly INewsRepository _newsRepository;
         public NewsController(INewsRepository newsRepository)
         {
             _newsRepository = newsRepository;
@@ -32,7 +32,6 @@ namespace CrawlDataForAPI.Controllers
             }
         }
 
-        /// <summary>
         /// <summary>
         /// Get movie by name from website https://kenh14.vn/
         /// </summary>

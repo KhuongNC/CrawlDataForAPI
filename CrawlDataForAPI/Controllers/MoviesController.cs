@@ -8,7 +8,7 @@ namespace CrawlDataForAPI.Controllers
 {
     public class MoviesController : ApiController
     {
-        private IMovieRepository _movieRepository;
+        private readonly IMovieRepository _movieRepository;
         public MoviesController(IMovieRepository movieRepository)
         {
             _movieRepository = movieRepository;
