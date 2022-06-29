@@ -1,6 +1,7 @@
 # Crawl data for creating APIs
 <h3>Crawl data from websites to create APIs.</h3>
 <h3>Deploy at https://crawldataforapi.azurewebsites.net/</h3>
+<h3>Swagger: https://crawldataforapi.azurewebsites.net/swagger/ui/index</h3>
 <h4>Movie website</h4>
 <p>1. BHDSTAR https://www.bhdstar.vn/</p>
 <ul style="list-style-type:disc">
