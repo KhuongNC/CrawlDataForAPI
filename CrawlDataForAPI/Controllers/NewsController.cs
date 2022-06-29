@@ -56,5 +56,28 @@ namespace CrawlDataForAPI.Controllers
             }
         }
 
+        /// <summary>
+        /// Get movie by type of news from website https://kenh14.vn/
+        /// </summary>
+        /// <param name="typeOfNews"></param>
+        /// <returns></returns>
+        public HttpResponseMessage GetNewsFromKenh14ByTypeOfNews(string typeOfNews)
+        {
+            try
+            {
+                var news = _newsRepository.GetNewsByTypeOfNews(typeOfNews);
+
+                if (news.Count() == 0)
+                {
+                    return Request.CreateResponse(HttpStatusCode.NotFound, "No news with " + typeOfNews);
+                }
+
+                return Request.CreateResponse(HttpStatusCode.OK, news);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex.ToString());
+            }
+        }
     }
 }
